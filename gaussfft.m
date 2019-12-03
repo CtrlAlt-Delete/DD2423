@@ -23,7 +23,7 @@ function C = gaussfft(pic, t)
     filter = (1/(2*pi*t)*exp(-(X.^2+Y.^2)/(2*t)));
     filter = filter/sum(filter(:));
     
-    VarEst = variance(filter)
+    VarEst = variance(filter);
 %     figure
 %     showgrey(filter)
     filterHat = abs(fft2(filter));               % Fourier transform of Gaussian filter
